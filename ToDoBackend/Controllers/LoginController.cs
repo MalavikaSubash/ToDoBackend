@@ -22,7 +22,7 @@ namespace ToDoBackend.Controllers
 
         // PUT: api/Login
         [HttpPut]
-        public UserDefn Put(userDetails newUserDetails)
+        public UserDefn Put([FromBody] userDetails newUserDetails)
         {
             return loginService.userLogin(newUserDetails);
         }
