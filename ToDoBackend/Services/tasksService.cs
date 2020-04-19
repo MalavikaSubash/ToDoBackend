@@ -17,18 +17,18 @@ namespace ToDoBackend.Services
             this._context = _context;
         }
 
-        public IEnumerable<Tasks> getTasks(int userId, DateTime taskDate, string status)
+       public List<Tasks> getTasks(getTask taskModel)
         {
-            IList<Tasks> results = null;
+            List<Tasks> results = null;
             try
             {
                 var statusId = (from s in _context.Status
-                                where s.StatusName == status
+                                where s.StatusName == taskModel.Status
                                 select s.StatusId).FirstOrDefault();
 
                 results = (from t in _context.Tasks
-                           where t.UserId == userId 
-                           && t.TaskDate == taskDate 
+                           where t.UserId == taskModel.userId 
+                           && t.TaskDate == taskModel.taskDate 
                            && t.StatusId == statusId
                            select t).ToList();
                 return results;

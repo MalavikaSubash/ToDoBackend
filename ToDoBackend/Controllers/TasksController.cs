@@ -20,11 +20,12 @@ namespace ToDoBackend.Controllers
         {
             this.taskService = taskService;
         }
-        // GET: api/Tasks
-        [HttpGet]
-        public IEnumerable<Tasks> Get(int userId, DateTime taskDate, string status)
+        // POST: api/Tasks
+        [HttpPost("Dashboard")]
+        public List<Tasks> Get([FromBody] getTask taskModel)
         {
-            return taskService.getTasks(userId, taskDate, status);
+            var allTasks = taskService.getTasks(taskModel);
+            return allTasks;
         }
 
         // POST: api/Tasks
