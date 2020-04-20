@@ -9,10 +9,10 @@ namespace ToDoBackend.Services
 {
     public interface ItasksService
     {
-        public List<Tasks> getTasks(getTask taskModel);
-        public void addTask(taskDetails taskModel);
-        public void editTask(int taskId, taskDetails taskModel);
-        public void updateStatus(updateStatus statusModel);
-        public void deleteTask(int taskId);
+        public List<Tasks> GetTasks(getTask taskModel);
+        public void AddTask(taskDetails taskModel);
+        public void EditTask(int taskId, taskDetails taskModel);
+        public void UpdateStatus(updateStatus statusModel);
+        public void DeleteTask(int taskId);
     }
 }

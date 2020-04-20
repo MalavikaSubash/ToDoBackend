@@ -7,10 +7,9 @@ namespace ToDoBackend.Models
 {
     public class taskDetails
     {
-        public string TaskName { get; set; }
-        public string TaskDescription { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Date { get; set; }
         public string Email { get; set; }
-        public DateTime TaskDate { get; set; }
-        public string Status { get; set; }
     }
 }

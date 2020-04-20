@@ -22,36 +22,36 @@ namespace ToDoBackend.Controllers
         }
         // POST: api/Tasks
         [HttpPost("Dashboard")]
-        public List<Tasks> Get([FromBody] getTask taskModel)
+        public List<Tasks> GetTasks([FromBody] getTask taskModel)
         {
-            var allTasks = taskService.getTasks(taskModel);
+            var allTasks = taskService.GetTasks(taskModel);
             return allTasks;
         }
 
         // POST: api/Tasks
         [HttpPost]
-        public void Post(taskDetails taskModel)
+        public void AddTask([FromBody] taskDetails taskModel)
         {
-            taskService.addTask(taskModel);
+            taskService.AddTask(taskModel);
         }
 
         // PUT: api/Tasks/5
         [HttpPut("{taskId}")]
-        public void editTask(int taskId, [FromBody] taskDetails taskModel)
+        public void EditTask(int taskId, [FromBody] taskDetails taskModel)
         {
-            taskService.editTask(taskId, taskModel);
+            taskService.EditTask(taskId, taskModel);
         }
 
         [HttpPut("update")]
-        public void updateStatus([FromBody] updateStatus statusModel)
+        public void UpdateStatus([FromBody] updateStatus statusModel)
         {
-            taskService.updateStatus(statusModel);
+            taskService.UpdateStatus(statusModel);
         }
 
         [HttpPut("delete/{taskId}")]
-        public void deleteTask(int taskId)
+        public void DeleteTask(int taskId)
         {
-            taskService.deleteTask(taskId);
+            taskService.DeleteTask(taskId);
         }
     }
 }

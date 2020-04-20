@@ -17,7 +17,7 @@ namespace ToDoBackend.Services
             this._context = _context;
         }
 
-       public List<Tasks> getTasks(getTask taskModel)
+       public List<Tasks> GetTasks(getTask taskModel)
         {
             List<Tasks> results = null;
             try
@@ -39,7 +39,7 @@ namespace ToDoBackend.Services
             }
         }
 
-        public void addTask(taskDetails taskModel)
+        public void AddTask(taskDetails taskModel)
         {
             try
             {
@@ -62,9 +62,9 @@ namespace ToDoBackend.Services
 
                 Tasks newTask = new Tasks
                 {
-                    TaskName = taskModel.TaskName,
-                    TaskDescription = taskModel.TaskDescription,
-                    TaskDate = taskModel.TaskDate,
+                    TaskName = taskModel.Name,
+                    TaskDescription = taskModel.Description,
+                    TaskDate = taskModel.Date,
                     StatusId = 1,
                     UserId = user.UserId
                 };
@@ -79,7 +79,7 @@ namespace ToDoBackend.Services
            
         }
 
-        public void editTask(int taskId, taskDetails taskModel)
+        public void EditTask(int taskId, taskDetails taskModel)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace ToDoBackend.Services
                         where u.Email == taskModel.Email
                         select u).FirstOrDefault();
 
-                _context.Database.ExecuteSqlRaw("UPDATE Tasks SET TaskName = '" + taskModel.TaskName+"', TaskDescription='"+taskModel.TaskDescription+"', TaskDate='"+taskModel.TaskDate+"', UserId='"+user.UserId+"' where TaskId='"+taskId+"'");
+                _context.Database.ExecuteSqlRaw("UPDATE Tasks SET TaskName = '" + taskModel.Name+"', TaskDescription='"+taskModel.Description+"', TaskDate='"+taskModel.Date+"', UserId='"+user.UserId+"' where TaskId='"+taskId+"'");
                 _context.SaveChanges();
             } 
             catch(Exception ex)
@@ -109,7 +109,7 @@ namespace ToDoBackend.Services
                 throw ex;
             }
         }
-        public void updateStatus(updateStatus statusModel)
+        public void UpdateStatus(updateStatus statusModel)
         {
             try
             {
@@ -126,7 +126,7 @@ namespace ToDoBackend.Services
             }
         }
 
-        public void deleteTask(int taskId)
+        public void DeleteTask(int taskId)
         {
             try
             {
