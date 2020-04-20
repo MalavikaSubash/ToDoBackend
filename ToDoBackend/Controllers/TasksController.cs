@@ -39,18 +39,17 @@ namespace ToDoBackend.Controllers
         [HttpPut("{taskId}")]
         public void editTask(int taskId, [FromBody] taskDetails taskModel)
         {
-            taskService.editTask(taskId,taskModel);
+            taskService.editTask(taskId, taskModel);
         }
 
-        [HttpPut]
+        [HttpPut("update/{taskId}")]
         public void updateStatus(int taskId, string Status)
         {
-            taskService.updateStatus(taskId,Status);
+            taskService.updateStatus(taskId, Status);
         }
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete]
-        public void Delete(int taskId)
+        [HttpPut("delete/{taskId}")]
+        public void deleteTask(int taskId)
         {
             taskService.deleteTask(taskId);
         }

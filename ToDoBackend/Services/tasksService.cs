@@ -130,10 +130,11 @@ namespace ToDoBackend.Services
         {
             try
             {
-                var task = (from t in _context.Tasks
-                            where t.TaskId == taskId
-                            select t).FirstOrDefault();
-                _context.Tasks.Remove(task);
+                var statusId = (from s in _context.Status
+                                where s.StatusName == "Deleted"
+                                select s.StatusId).FirstOrDefault();
+
+                _context.Database.ExecuteSqlRaw("UPDATE Tasks SET StatusId = '"+statusId+"' where TaskId = '"+taskId+"'");
                 _context.SaveChanges();
             }
             catch(Exception ex)
