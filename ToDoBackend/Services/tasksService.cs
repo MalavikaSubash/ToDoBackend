@@ -109,15 +109,15 @@ namespace ToDoBackend.Services
                 throw ex;
             }
         }
-        public void updateStatus(int taskId, string Status)
+        public void updateStatus(updateStatus statusModel)
         {
             try
             {
                 var statusId = (from s in _context.Status
-                                where s.StatusName == Status
+                                where s.StatusName == statusModel.status
                                 select s.StatusId).FirstOrDefault();
 
-                _context.Database.ExecuteSqlRaw("UPDATE Tasks SET StatusId = '"+statusId+"' where TaskId = '"+taskId+"'");
+                _context.Database.ExecuteSqlRaw("UPDATE Tasks SET StatusId = '"+statusId+"' where TaskId = '"+statusModel.taskId+"'");
                 _context.SaveChanges();
             }
             catch(Exception ex)

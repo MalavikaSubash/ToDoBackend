@@ -119,6 +119,7 @@ E:\ToDo\ToDoBackend\ToDoBackend\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\
 E:\ToDo\ToDoBackend\ToDoBackend\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\ToDo\ToDoBackend\ToDoBackend\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\ToDo\ToDoBackend\ToDoBackend\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.csprojAssemblyReference.cache
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\staticwebassets\ToDoBackend.StaticWebAssets.Manifest.cache
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\staticwebassets\ToDoBackend.StaticWebAssets.xml
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.MvcApplicationPartsAssemblyInfo.cs
@@ -129,4 +130,3 @@ E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.RazorTargetA
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.csproj.CopyComplete
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.dll
 E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.pdb
-E:\ToDo\ToDoBackend\ToDoBackend\obj\Debug\netcoreapp3.1\ToDoBackend.csprojAssemblyReference.cache

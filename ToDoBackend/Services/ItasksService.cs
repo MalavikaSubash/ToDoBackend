@@ -12,7 +12,7 @@ namespace ToDoBackend.Services
         public List<Tasks> getTasks(getTask taskModel);
         public void addTask(taskDetails taskModel);
         public void editTask(int taskId, taskDetails taskModel);
-        public void updateStatus(int taskId, string Status);
+        public void updateStatus(updateStatus statusModel);
         public void deleteTask(int taskId);
     }
 }

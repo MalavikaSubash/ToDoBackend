@@ -42,10 +42,10 @@ namespace ToDoBackend.Controllers
             taskService.editTask(taskId, taskModel);
         }
 
-        [HttpPut("update/{taskId}")]
-        public void updateStatus(int taskId, string Status)
+        [HttpPut("update")]
+        public void updateStatus([FromBody] updateStatus statusModel)
         {
-            taskService.updateStatus(taskId, Status);
+            taskService.updateStatus(statusModel);
         }
 
         [HttpPut("delete/{taskId}")]
