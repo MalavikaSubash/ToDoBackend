@@ -9,7 +9,7 @@ namespace ToDoBackend.Services
 {
     public interface ItasksService
     {
-        public List<Tasks> GetTasks(getTask taskModel);
+        public List<Tasks> GetTasks(getTask getTasksModel);
         public void AddTask(taskDetails taskModel);
         public void EditTask(int taskId, taskDetails taskModel);
         public void UpdateStatus(updateStatus statusModel);

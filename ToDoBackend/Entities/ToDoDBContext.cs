@@ -24,7 +24,7 @@ namespace ToDoBackend.Entities
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("DefaultConnection");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-JP380II;Database=ToDoDB;Trusted_Connection=True;");
             }
         }
 

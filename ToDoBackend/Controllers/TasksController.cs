@@ -22,9 +22,9 @@ namespace ToDoBackend.Controllers
         }
         // POST: api/Tasks
         [HttpPost("Dashboard")]
-        public List<Tasks> GetTasks([FromBody] getTask taskModel)
+        public List<Tasks> GetTasks([FromBody] getTask getTasksModel)
         {
-            var allTasks = taskService.GetTasks(taskModel);
+            var allTasks = taskService.GetTasks(getTasksModel);
             return allTasks;
         }
 
