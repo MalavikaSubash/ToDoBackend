@@ -14,17 +14,17 @@ namespace ToDoBackend.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        public IloginService loginService;
-        public LoginController(IloginService loginService)
+        public ILoginService loginService;
+        public LoginController(ILoginService loginService)
         {
             this.loginService = loginService;
         }
 
         // PUT: api/Login
         [HttpPut]
-        public UserDefn Put([FromBody] userDetails newUserDetails)
+        public UserDefn Put([FromBody] UserDetails newUserDetails)
         {
-            return loginService.userLogin(newUserDetails);
+            return loginService.UserLogin(newUserDetails);
         }
     }
 }

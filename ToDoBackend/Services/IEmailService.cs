@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ToDoBackend.Entities;
 using ToDoBackend.Models;
 
 namespace ToDoBackend.Services
 {
-    public interface ILoginService
+    public interface IEmailService
     {
-        public UserDefn UserLogin(UserDetails newUserDetails);
+        bool SendMail(EmailModel emailModel);
     }
 }

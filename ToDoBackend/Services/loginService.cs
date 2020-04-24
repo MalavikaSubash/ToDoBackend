@@ -8,14 +8,14 @@ using ToDoBackend.Models;
 
 namespace ToDoBackend.Services
 {
-    public class loginService : IloginService
+    public class LoginService : ILoginService
     {
         ToDoDBContext _context;
-        public loginService(ToDoDBContext _context)
+        public LoginService(ToDoDBContext _context)
         {
             this._context = _context;
         }
-        public UserDefn userLogin(userDetails userDetails)
+        public UserDefn UserLogin(UserDetails userDetails)
         {
             try
             {                

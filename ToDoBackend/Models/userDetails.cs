@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ToDoBackend.Models
 {
-    public class userDetails
+    public class UserDetails
     {
         public string UserName { get; set; }
         public string Email { get; set; }

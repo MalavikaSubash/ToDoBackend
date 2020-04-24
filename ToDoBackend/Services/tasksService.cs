@@ -8,16 +8,16 @@ using ToDoBackend.Models;
 
 namespace ToDoBackend.Services
 {
-    public class tasksService: ItasksService
+    public class TasksService: ITasksService
     {
         private readonly ToDoDBContext _context;
         
-        public tasksService(ToDoDBContext _context)
+        public TasksService(ToDoDBContext _context)
         {
             this._context = _context;
         }
 
-       public List<Tasks> GetTasks(getTask getTasksModel)
+       public List<Tasks> GetTasks(GetTask getTasksModel)
         {
             List<Tasks> results = null;
             try
@@ -39,7 +39,7 @@ namespace ToDoBackend.Services
             }
         }
 
-        public void AddTask(taskDetails taskModel)
+        public void AddTask(TaskDetails taskModel)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace ToDoBackend.Services
            
         }
 
-        public void EditTask(int taskId, taskDetails taskModel)
+        public void EditTask(int taskId, TaskDetails taskModel)
         {
             try
             {
@@ -109,7 +109,7 @@ namespace ToDoBackend.Services
                 throw ex;
             }
         }
-        public void UpdateStatus(updateStatus statusModel)
+        public void UpdateStatus(UpdateStatus statusModel)
         {
             try
             {

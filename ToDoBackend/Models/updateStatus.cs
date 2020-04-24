@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ToDoBackend.Models
 {
-    public class updateStatus
+    public class UpdateStatus
     {
         public int taskId { get; set; }
         public string status { get; set; }

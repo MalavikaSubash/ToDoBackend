@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ToDoBackend.Models
 {
-    public class getTask
+    public class GetTask
     {
         public int userId { get; set; }
         public DateTime TaskDate { get; set; }

@@ -7,12 +7,12 @@ using ToDoBackend.Models;
 
 namespace ToDoBackend.Services
 {
-    public interface ItasksService
+    public interface ITasksService
     {
-        public List<Tasks> GetTasks(getTask getTasksModel);
-        public void AddTask(taskDetails taskModel);
-        public void EditTask(int taskId, taskDetails taskModel);
-        public void UpdateStatus(updateStatus statusModel);
+        public List<Tasks> GetTasks(GetTask getTasksModel);
+        public void AddTask(TaskDetails taskModel);
+        public void EditTask(int taskId, TaskDetails taskModel);
+        public void UpdateStatus(UpdateStatus statusModel);
         public void DeleteTask(int taskId);
     }
 }

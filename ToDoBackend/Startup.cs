@@ -34,8 +34,9 @@ namespace ToDoBackend
             services.AddDbContext<ToDoDBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IloginService, loginService>();
-            services.AddTransient<ItasksService, tasksService>();
+            services.AddTransient<ILoginService, LoginService>();
+            services.AddTransient<ITasksService, TasksService>();
+            services.AddTransient<IEmailService, EmailService>();
 
             services.AddSwaggerGen(c =>
             {
